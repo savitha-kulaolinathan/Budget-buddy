@@ -7,11 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header"></div>
-    <div id="budget"></div>
-    <div id="inputExpenses"></div>
-    <div id="balance"></div>
-    <div id="chart"></div>
+    <div class = "top">
+        <p>Budget Buddy</p>
+        <button type = "text">Log Out</button>
+    </div>
+    <div class = "inputContainer">
+   <label for="budgetAmount"></label>
+        <input class ="budgetAmount" type = "number" placeholder = "Enter your amount"> 
+        <button class = "enterBudget">Submit</button><br>
+        <select>
+            <option></option>
+            <option>Entertainment</option>
+            <option>Food</option>
+            <option>Clothing</option>
+            <option>Bills</option>
+            <option>Other</option>
+        </select><br>
+        <input class = "purchaseAmount" type = "text" value = "Cost">
+        <button class = "purchased">Submit</button>
+    </div>
+    <div class = "balance">
+        
+    </div>
+
+
     <script src="./script.js"></script>
     
 </body>
