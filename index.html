@@ -1,13 +1,45 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget buddy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css"></link>
 </head>
 <body>
+    <div class = "top">
+        <p>Budget Buddy</p>
+        <button type = "text">Log Out</button>
+    </div>
+    <div class = "inputContainer">
+        <div class="left">
+            <label for="budgetAmount">  Weekly Budget Amount:</label>
+            <input class ="budgetAmount" id= "budgetAmount" type = "number" placeholder = "Enter your amount">            
+            <button class = "enterBudget"  id= "enterBudget">Submit</button><br>
+            <h3>Amount  of Budget: <span id ="amountOfBudget"></span></h3>
+        </div>
+        
+      
+            <label for="expenses">Purchased Items </label>
+            <select id= "expenses">
+            <option class= "category">Entertainment</option>
+            <option  class= "category">Food</option>
+            <option  class= "category">Clothing</option>
+            <option  class= "category">Bills</option>
+            
+        </select>
+        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">
+        <button class = "purchase" id="purchase" onclick="expensesAmount(event)">AddItems</button>
+        <h3>List of Items purchased: <span id ="listOfItems">
+            <div class= "item-container" id= item1></div>
+            <div  class= "item-container" id= item2></div>
+            <div class= "item-container" id= item3></div>
+            <div class= "item-container" id= item4></div>
+        </span></h3>
+    </div>
+    <div class = "balance">
+        
+    </div>
     <script src="./script.js"></script>
-    
 </body>
 </html>
