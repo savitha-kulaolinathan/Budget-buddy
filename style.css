@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .top{
     display: flex;
     justify-content: space-between;
@@ -55,3 +56,20 @@ html{
     border-radius: 5px;
 }
 
+=======
+.left {
+    display: flex;
+   margin: 15px;
+   padding: 20px;
+   /* justify-content: space-around; */
+
+}
+ .enterBudget {
+     margin:10px;
+     padding:10px;
+ }
+  .item-container {
+      margin-left:70px;
+      padding: 10px;
+  }
+>>>>>>> 8a236d3e6697da42b4f5e0aedcd491e5df23fd12
