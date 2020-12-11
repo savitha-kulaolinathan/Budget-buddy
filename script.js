@@ -10,17 +10,30 @@ function expensesAmount(e) {
   let expenses = document.getElementById("expenses").value;
   let purchaseAmount = document.getElementById("purchaseAmount").value;
   let listOfItems = document.getElementById("listOfItems");
-  let item1= document.getElementById('item1');
-  let item2= document.getElementById('item2');
-  let item3= document.getElementById('item3');
-  let item4= document.getElementById('item4');
+  
+  
+
   if (expenses === "Entertainment") {
-    item1.append (` Entertainment amount: $ ${purchaseAmount}`);
+    let item1 = document.createElement("div");
+    item1.innerText = `Entertainment amount: $ ${purchaseAmount}`;
+    listOfItems.append(item1);
+    let amountOfBudget = document.getElementById("amountOfBudget");
+  
+    let balance = document.getElementById('balance');   
+    let total = parseInt(amountOfBudget) - parseInt(purchaseAmount);
+    balance.innerText = total;
+    
   } else if (expenses === "Food") {
-    item2.append(` Food amount: $ ${purchaseAmount}`);
+    let item2 = document.createElement("div");
+    item2.innerText = `Food amount: $ ${purchaseAmount}`;
+    listOfItems.append(item2);
   } else if (expenses === "Bills") {
-    item4.append( ` Billing amount: $ ${purchaseAmount}`);
+    let item4 = document.createElement("div");
+    item4.innerText = ` Billing amount: $ ${purchaseAmount}`;
+    listOfItems.append(item4);
   } else if (expenses === "Clothing") {
-    item3.append(` Clothing amount: $ ${purchaseAmount}`);
+    let item3 = document.createElement("div");
+    item3.innerText = ` Clothing amount: $ ${purchaseAmount}`;
+    listOfItems.append(item3);
   }
 }
