@@ -1,4 +1,4 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,29 +23,36 @@ s<!DOCTYPE html>
             
         </div>
         <div class = "purchased"> 
-            
-            <label for="expenses">Purchased Items </label>
+            <label for="expenses" class = "purchasedTitle">Purchased Items </label><br>
             <select id= "expenses">
+            <option class ="category" selected>Type of Item</option>
             <option class= "category">Entertainment</option>
             <option  class= "category">Food</option>
             <option  class= "category">Clothing</option>
             <option  class= "category">Bills</option>
             
-        </select>
-        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">
-        <button class = "purchase" id="purchase" onclick="expensesAmount(event)">AddItems</button>
-        <h3>List of Items purchased: <span id ="listOfItems">
-            <div class= "item-container" id= item1></div>
-            <div  class= "item-container" id= item2></div>
-            <div class= "item-container" id= item3></div>
-            <div class= "item-container" id= item4></div>
-        </span></h3>
+        </select><br>
+        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount"><br>
+        <button class = "purchase" id="purchase">AddItems</button> <br>
         </div>
     </div> 
         <div class = "balance">
             <p id = "spendLabel">Available to spend </p>
-            <p id = "displayAmount"></p>
+            <p id = ></p>
         </div>
+        <div id="totals">
+            <h2>Totals</h2>
+            <p id="entertainment">Entertainment: </p>
+            <p id="food">Food: </p>
+            <p id="clothing">Clothing: </p>
+            <p id="bills">Bills: </p>
+        </div>
+        <p class = "listLabel">List of Items purchased: <span id ="listOfItems">
+            <div class= "item-container" id= item1></div>
+            <div class= "item-container" id= item2></div>
+            <div class= "item-container" id= item3></div>
+            <div class= "item-container" id= item4></div>
+        </span></p>
     </div> 
     <script src = "script.js"></script>
 </body>
@@ -54,28 +61,4 @@ s<!DOCTYPE html>
 
         
       
-            <label for="expenses">Purchased Items </label>
-            <select id= "expenses">
-            <option class= "category">Entertainment</option>
-            <option  class= "category">Food</option>
-            <option  class= "category">Clothing</option>
-            <option  class= "category">Bills</option>
-            
-        </select>
-        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">
-        <button class = "purchase" id="purchase" onclick="expensesAmount(event)">AddItems</button>
-        <h3>List of Items purchased: <span id ="listOfItems">
-            <div class= "item-container" id= item1></div>
-            <div  class= "item-container" id= item2></div>
-            <div class= "item-container" id= item3></div>
-            <div class= "item-container" id= item4></div>
-        </span></h3>
-    </div>
-    <div class = "balance">
-        
-    </div>
-
-
-    <script src="./script.js"></script>
-</body>
-</html>
+          
