@@ -8,15 +8,50 @@ p{
 }
 .logOut{
     height:20px;
+    border-color:yellow;
+    background-color:green;
+    color:yellow;
+    border-radius: 20px;
+    
 }
 h1{
     margin:0px;
+    font-family: 'Courgette', cursive;
+    text-shadow:-1px 1px 0 white;
 }
 select{
     margin-bottom: 20px;
 }
 .displayTotal{
     margin:0px;
-    font-size: 40px;
+    font-size: 40px;   
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#weeklyLabel{
+    margin-top:80px;
+    font-family: 'Epilogue', sans-serif;
+}
+.purchaseAmount{
+    margin-bottom: 10px;;
+}
+#purchasedLabel,#spendLabel{
+    font-family: 'Epilogue', sans-serif;
     
 }
+html{
+    background-image: linear-gradient(green,rgb(255, 255, 255));
+    height:100%;
+}
+.purchaseAmount{
+    width:80px;
+    text-align: center;
+}
+.budgetAmount,select,.purchaseAmount{
+    background-color: white;
+    border-radius: 5px;
+}
+

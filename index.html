@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel = "stylesheet" href = "style.css"></link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class = "top">
@@ -15,26 +17,34 @@
         <div class ="budget">
             <p id = "weeklyLabel">Weekly Budget Amount</p>
             <p class = "displayTotal"> </p> 
-            <input class ="budgetAmount" type = "number">
+            <input class ="budgetAmount" type = "number" placeholder = "Enter Budget Amount">
             <button class = "submitBudget">Submit</button><br>
             <button class = "editBudget">Edit</button>
             
         </div>
         <div class = "purchased">
             <p id ="purchasedLabel">Purchased Items</p>
-            <select>
+           <div class = "inputPurchased">
+            <select id = "expenses">
                 <option selected>Type of Purchase</option>
-                <option>Entertainment</option>
-                <option>Food</option>
-                <option>Clothing</option>
-                <option>Bills</option>
-                <option>Other</option>
+                <option class ="category">Entertainment</option>
+                <option class ="category">Food</option>
+                <option class ="category">Clothing</option>
+                <option class ="category">Bills</option>
             </select><br>
-            <input class = "purchaseAmount" type = "text" placeholder = "Cost">
+            <input class = "purchaseAmount" type = "text" placeholder = "Enter Cost">  <br>
             <button class = "purchased">Submit</button>
+            <h3>List of Items purchased: <span id ="listOfItems">
+                <div class= "item-container" id= item1></div>
+                <div  class= "item-container" id= item2></div>
+                <div class= "item-container" id= item3></div>
+                <div class= "item-container" id= item4></div>
+            </span></h3>
         </div>
+    </div> 
         <div class = "balance">
-            <p id = "SpendLabel">Available to spend </p>
+            <p id = "spendLabel">Available to spend </p>
+            <p id = "displayAmount"></p>
         </div>
     </div> 
     <script src = "script.js"></script>
