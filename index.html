@@ -1,4 +1,4 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,20 +20,17 @@ s<!DOCTYPE html>
             <input class ="budgetAmount" type = "number" placeholder = "Enter Budget Amount">
             <button class = "submitBudget">Submit</button><br>
             <button class = "editBudget">Edit</button>
-            
         </div>
         <div class = "purchased"> 
-            
-            <label for="expenses">Purchased Items </label>
+            <label for="expenses" class = "purchasedTitle">Purchased Items </label><br>
             <select id= "expenses">
-            <option class= "category">Entertainment</option>
-            <option  class= "category">Food</option>
-            <option  class= "category">Clothing</option>
-            <option  class= "category">Bills</option>
-            
-        </select>
-        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">
-        <button class = "purchase" id="purchase" onclick="expensesAmount(event)">AddItems</button>
+            <option class= "category" value="Entertainment">Entertainment</option>
+            <option  class= "category" value="Food">Food</option>
+            <option  class= "category" value="Clothing">Clothing</option>
+            <option  class= "category" value="Bills">Bills</option>
+        </select><br>
+        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount"><br>
+        <button class = "purchase" id="purchase">AddItems</button>
         <h3>List of Items purchased: <span id ="listOfItems">
             <div class= "item-container" id= item1></div>
             <div  class= "item-container" id= item2></div>
@@ -44,32 +41,18 @@ s<!DOCTYPE html>
     </div> 
         <div class = "balance">
             <p id = "spendLabel">Available to spend </p>
-            <p id = "displayAmount"></p>
+            <p id = ></p>
+        </div>
+        <div id="totals">
+            <h2>Totals</h2>
+            <p id="entertainment">Entertainment: </p>
+            <p id="food">Food: </p>
+            <p id="clothing">Clothing: </p>
+            <p id="bills">Bills: </p>
         </div>
     </div> 
-            <label for="expenses">Purchased Items </label>
-            <select id= "expenses">
-            <option class= "category">Entertainment</option>
-            <option  class= "category">Food</option>
-            <option  class= "category">Clothing</option>
-            <option  class= "category">Bills</option>
-            
-        </select>
-        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">
-        <button class = "purchase" id="purchase" onclick="expensesAmount(event)">AddItems</button>
-        <h3>List of Items purchased: <span id ="listOfItems">
-            <div class= "item-container" id= item1></div>
-            <div  class= "item-container" id= item2></div>
-            <div class= "item-container" id= item3></div>
-            <div class= "item-container" id= item4></div>
-        </span></h3>
-    </div>
-    <div class = "balance">
-        
-    </div>
-
-    <script src="amyscript.js"></script>
-    <script src="./script.js"></script>
-
+    <script src = "script.js"></script>
 </body>
 </html>
+
+
