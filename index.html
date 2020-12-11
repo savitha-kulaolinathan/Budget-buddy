@@ -19,12 +19,11 @@
             <p class = "displayTotal"> </p> 
             <input class ="budgetAmount" type = "number" placeholder = "Enter Budget Amount">
             <button class = "submitBudget">Submit</button><br>
-            <button class = "editBudget">Edit</button>
-            
-        </div>
-        <div class = "purchased"> 
-            
-            <label for="expenses">Purchased Items </label>
+            <button class = "editBudget">Edit</button>            
+        </div>      
+       </div> 
+    <div>
+     <label for="expenses">Purchased Items </label>
             <select id= "expenses">
             <option class= "category">Entertainment</option>
             <option  class= "category">Food</option>
@@ -40,35 +39,12 @@
             <div class= "item-container" id= item3></div>
             <div class= "item-container" id= item4></div>
         </span></h3>
-        </div>
-    </div> 
+    </div>
         <div class = "balance">
             <p id = "spendLabel">Available to spend </p>
             <p id = "displayAmount"></p>
         </div>
-    </div> 
-            <label for="expenses">Purchased Items </label>
-            <select id= "expenses">
-            <option class= "category">Entertainment</option>
-            <option  class= "category">Food</option>
-            <option  class= "category">Clothing</option>
-            <option  class= "category">Bills</option>
-            
-        </select>
-        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">
-        <button class = "purchase" id="purchase" onclick="expensesAmount(event)">AddItems</button>
-        <h3>List of Items purchased: <span id ="listOfItems">
-            <div class= "item-container" id= item1></div>
-            <div  class= "item-container" id= item2></div>
-            <div class= "item-container" id= item3></div>
-            <div class= "item-container" id= item4></div>
-        </span></h3>
-    </div>
-    <div class = "balance">
-        
-    </div>
-
-
+    </div>       
     <script src="./script.js"></script>
 </body>
 </html>
