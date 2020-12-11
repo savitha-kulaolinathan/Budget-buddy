@@ -24,10 +24,9 @@ budgetEdit.addEventListener('click', function() {
     document.querySelector('.displayTotal').style.visibility="hidden";
 });
 ///function for expenses
-expensesAmount.addEventListener('click', function() {
-    // e.preventDefault(); 
-    let expenses = document.querySelector("#expenses").value;
-    console.log(expenses);
+function expensesAmount(e) {
+    e.preventDefault();
+    let expenses = document.getElementById("expenses").value;
     let purchaseAmount = document.getElementById("purchaseAmount").value;
     let listOfItems = document.getElementById("listOfItems");
     let item1= document.getElementById('item1');
