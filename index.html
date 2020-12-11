@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget buddy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css"></link>
 </head>
 <body>
-    <script src="./script.js"></script>
-    
+    <div class = "top">
+        <p>Budget Buddy</p>
+        <button type = "text">Log Out</button>
+    </div>
+    <div class = "inputContainer">
+        <input class ="budgetAmount" type = "number"> 
+        <button class = "enterBudget">Submit</button><br>
+        <select id="category">
+            <option id="entertainment" value="entertainment">Entertainment</option>
+            <option id="food" value="food">Food</option>
+            <option id="clothing" value="clothing">Clothing</option>
+            <option id="bills" value="bills">Bills</option>
+            <option id="other" value="other">Other</option>
+        </select><br>
+        <input class = "purchaseAmount" type ="number">
+        <button class = "purchased" id="submit">Submit</button>
+    </div>
+    <div class = "balance">
+    </div>
+    <div class="categoryTotals">
+        <p id="entertainmentTotal">Entertainment: $0.00</p>
+        <p id="clothingTotal">Clothing: $0.00</p>
+        <p id="foodTotal">Food: $0.00</p>
+        <p id="billsTotal">Bills: $0.00</p>
+        <p id="otherTotal">Other: $0.00</p>
+    </div>
+    <script ref="script.js"></script>
 </body>
 </html>
