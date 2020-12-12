@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class = "top">
-        <h1>Budget Buddy</h1>
-        <button class ="logOut" type = "text">Log Out</button>
+       <h1>Budget Buddy</h1>
+        <a href ="http://127.0.0.1:5501/file.html" class = "logOut">Log Out</a>
     </div>
     <div class = "inputContainer">
         <div class ="budget">
@@ -22,33 +22,36 @@
             <button class = "editBudget">Edit</button>
             
         </div>
-        <div class = "purchased">
-            <p id ="purchasedLabel">Purchased Items</p>
-           <div class = "inputPurchased">
-            <select id = "expenses">
-                <option selected>Type of Purchase</option>
-                <option class ="category">Entertainment</option>
-                <option class ="category">Food</option>
-                <option class ="category">Clothing</option>
-                <option class ="category">Bills</option>
+        <div class = "purchased"> 
+            <label for="expenses" class = "purchasedTitle">Purchased Items </label><br>
+            <select id= "expenses">
+                <option class ="category" selected>Type of Item</option>
+                <option class= "category">Entertainment</option>
+                <option  class= "category">Food</option>
+                <option  class= "category">Clothing</option>
+                <option  class= "category">Bills</option>
             </select><br>
-            <input class = "purchaseAmount" type = "text" placeholder = "Enter Cost">  <br>
-            <!-- <button class = "purchased">Submit</button> -->
-            <button class = "purchase" id="purchase" onclick="expensesAmount(event)">Add Items</button>
-            <h3>List of Items purchased: <span id ="listOfItems">
-                <div class= "item-container" id= item1></div>
-                <div  class= "item-container" id= item2></div>
-                <div class= "item-container" id= item3></div>
-                <div class= "item-container" id= item4></div>
-            </span></h3>
+            <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount"><br>
+            <button class = "purchase" id="purchase">Add Items</button> <br>
         </div>
     </div> 
         <div class = "balance">
             <p id = "spendLabel">Available to spend </p>
-            <p id = "displayAmount"></p>
+            <p id = ></p>
         </div>
-    </div> 
+        <div id="totals">
+            <h2>Totals</h2>
+            <p id="entertainment">Entertainment: </p>
+            <p id="food">Food: </p>
+            <p id="clothing">Clothing: </p>
+            <p id="bills">Bills: </p>
+        </div>
+        <p class = "listLabel">List of Items purchased: <span id ="listOfItems">
+            <div class= "item-container" id= item1></div>
+            <div class= "item-container" id= item2></div>
+            <div class= "item-container" id= item3></div>
+            <div class= "item-container" id= item4></div>
+        </span></p>
     <script src = "script.js"></script>
 </body>
 </html>
-

@@ -12,7 +12,11 @@ p{
     background-color:green;
     color:yellow;
     border-radius: 20px;
-    
+    text-decoration: none;
+    border: 2px solid yellow;
+    width:80px;
+    text-align: center;
+
 }
 h1{
     margin:0px;
@@ -34,13 +38,14 @@ select{
 #weeklyLabel{
     margin-top:80px;
     font-family: 'Epilogue', sans-serif;
+    font-size: 25px;
 }
 .purchaseAmount{
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
 }
-#purchasedLabel,#spendLabel{
+.purchasedTitle,#spendLabel{
     font-family: 'Epilogue', sans-serif;
-    
+    font-size: 25px;
 }
 html{
     background-image: linear-gradient(green,rgb(255, 255, 255));
@@ -54,4 +59,3 @@ html{
     background-color: white;
     border-radius: 5px;
 }
-
