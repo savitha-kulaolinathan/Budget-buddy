@@ -1,11 +1,4 @@
-
-// let budgetButton = document.querySelector('.submitBudget');
-// let budgetA = document.querySelector(".budgetAmount" );
-// let budgetEdit = document.querySelector(".editBudget");
-// let expensesAmount= document.querySelector('.purchased');
-
 document.querySelector(".editBudget").style.visibility = "hidden";
-
 document.querySelector('.submitBudget').addEventListener('click', function(){
     document.querySelector(".budgetAmount" ).style.visibility = "hidden";
     document.querySelector(".editBudget").style.visibility = "visible";
@@ -15,7 +8,6 @@ document.querySelector('.submitBudget').addEventListener('click', function(){
     let inputValue = document.querySelector('.budgetAmount').value;
     let display = document.querySelector('.displayTotal');
     display.innerHTML =`$ ${inputValue}`;
-
 document.querySelector(".editBudget").addEventListener('click', function() {
         document.querySelector(".budgetAmount" ).style.visibility = "visible";
         document.querySelector(".editBudget").style.visibility = "hidden";
@@ -23,7 +15,6 @@ document.querySelector(".editBudget").addEventListener('click', function() {
         document.querySelector(".displayTotal").style.visibility = "hidden";
         document.querySelector(".budgetAmount" ).value = "none";
     });
-
 });
 document.getElementById("purchase").addEventListener('click',function(){
   let expenses = document.getElementById("expenses").value;
@@ -67,17 +58,7 @@ document.getElementById("purchase").addEventListener("click", function() {
         clothingTotal = clothingTotal + parseFloat(purchaseAmount);
        clothing.innerHTML="Clothing: $" + clothingTotal;
       }
-});
-
-
-
-
-
-
-
-
-
-
+})
 
 
 

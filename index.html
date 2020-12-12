@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class = "top">
-        <h1>Budget Buddy</h1>
-        <button class ="logOut" type = "text">Log Out</button>
+       <h1>Budget Buddy</h1>
+        <a href ="http://127.0.0.1:5501/file.html" class = "logOut">Log Out</a>
     </div>
     <div class = "inputContainer">
         <div class ="budget">
@@ -25,15 +25,14 @@
         <div class = "purchased"> 
             <label for="expenses" class = "purchasedTitle">Purchased Items </label><br>
             <select id= "expenses">
-            <option class ="category" selected>Type of Item</option>
-            <option class= "category">Entertainment</option>
-            <option  class= "category">Food</option>
-            <option  class= "category">Clothing</option>
-            <option  class= "category">Bills</option>
-            
-        </select><br>
-        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount"><br>
-        <button class = "purchase" id="purchase">AddItems</button> <br>
+                <option class ="category" selected>Type of Item</option>
+                <option class= "category">Entertainment</option>
+                <option  class= "category">Food</option>
+                <option  class= "category">Clothing</option>
+                <option  class= "category">Bills</option>
+            </select><br>
+            <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount"><br>
+            <button class = "purchase" id="purchase">Add Items</button> <br>
         </div>
     </div> 
         <div class = "balance">
@@ -53,7 +52,6 @@
             <div class= "item-container" id= item3></div>
             <div class= "item-container" id= item4></div>
         </span></p>
-    </div> 
     <script src = "script.js"></script>
 </body>
 </html>
