@@ -9,13 +9,13 @@ p{
 .logOut{
     height:20px;
     border-color:yellow;
-    background-color:green;
-    color:yellow;
+    background-color:white;
+    color:grey;
     border-radius: 20px;
 }
 h1{
     margin:0px;
-    font-family: 'Courgette', cursive;
+    font-family: 'Permanent Marker', cursive;
     text-shadow:-1px 1px 0 white;
 }
 select{
