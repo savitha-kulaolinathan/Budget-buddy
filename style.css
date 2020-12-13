@@ -16,15 +16,15 @@ p{
     border: 2px solid yellow;
     width:80px;
     text-align: center;
-
 }
 h1{
     margin:0px;
     font-family: 'Courgette', cursive;
-    text-shadow:-1px 1px 0 white;
+    text-shadow:1px 1px 0 white;
+    font-size: 50px;
 }
 select{
-    margin-bottom: 20px;
+    margin: 20px;
 }
 .displayTotal{
     margin:0px;
@@ -38,24 +38,86 @@ select{
 #weeklyLabel{
     margin-top:80px;
     font-family: 'Epilogue', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
 }
 .purchaseAmount{
     margin-bottom: 10px;
 }
-.purchasedTitle,#spendLabel{
+.purchasedTitle,.spend{
     font-family: 'Epilogue', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+    text-align: center;
 }
 html{
     background-image: linear-gradient(green,rgb(255, 255, 255));
-    height:100%;
 }
 .purchaseAmount{
     width:80px;
     text-align: center;
+    margin:10px;
 }
 .budgetAmount,select,.purchaseAmount{
     background-color: white;
     border-radius: 5px;
+    padding:8px;
+}
+.submitBudget,.editBudget{
+    border-radius: 7px;
+    background-color: rgb(245, 245, 135);
+    width:80px;
+    padding: 4px;
+}
+.editBudget{
+    margin-bottom:20px;
+}
+.purchase{
+    border-radius: 7px;
+    background-color: rgb(245, 245, 135);
+    width:80px;
+    padding: 4px;
+}
+.listLabel,.item-container{
+    visibility: hidden;
+}
+.balance{
+    padding:10px;
+    margin: 5px;
+}
+#totals{
+    margin:10px;
+}
+@media only screen and (min-width: 768px){
+    h1{
+        margin:0px;
+        font-family: 'Courgette', cursive;
+        text-shadow:3px 1px 0 rgb(229, 243, 105);
+        font-size: 100px;
+    }
+    .logOut{
+        height:20px;
+        border-color:yellow;
+        background-color:green;
+        color:yellow;
+        border-radius: 20px;
+        text-decoration: none;
+        border: 2px dotted yellow;
+        padding:5px;
+        text-align: center;
+    }
+    .purchase{
+        border-radius: 7px;
+        background-color: rgb(245, 245, 135);
+        width:80px;
+        padding: 4px;
+    }
+    .listLabel,.item-container{
+        visibility: visible;
+    }
+    .bottomHalf{
+        display:flex;
+        justify-content: space-between;
+    }
+    #weeklyLabel{
+        margin-top:40px;
+    }
 }

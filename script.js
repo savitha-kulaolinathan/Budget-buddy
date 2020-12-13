@@ -1,21 +1,28 @@
-document.querySelector(".editBudget").style.visibility = "hidden";
-document.querySelector('.submitBudget').addEventListener('click', function(){
-    document.querySelector(".budgetAmount" ).style.visibility = "hidden";
-    document.querySelector(".editBudget").style.visibility = "visible";
-    document.querySelector('.submitBudget').style.visibility = "hidden";
-    document.querySelector('.displayTotal').style.visibility="visible";
-    document.querySelector('.displayTotal').style.color = "yellow";
+let editBudget = document.querySelector(".editBudget");
+let budgetAmount = document.querySelector(".budgetAmount");
+let submitBudget = document.querySelector('.submitBudget');
+let displayTotal = document.querySelector('.displayTotal');
+
+editBudget.style.visibility = "hidden";
+
+submitBudget.addEventListener('click', function(){
+    budgetAmount.style.visibility = "hidden";
+    editBudget.style.visibility = "visible";
+    submitBudget.style.visibility = "hidden";
+    displayTotal.style.visibility="visible";
+    displayTotal.style.color = "yellow";
     let inputValue = document.querySelector('.budgetAmount').value;
     let display = document.querySelector('.displayTotal');
     display.innerHTML =`$ ${inputValue}`;
-document.querySelector(".editBudget").addEventListener('click', function() {
-        document.querySelector(".budgetAmount" ).style.visibility = "visible";
-        document.querySelector(".editBudget").style.visibility = "hidden";
-        document.querySelector('.submitBudget').style.visibility = "visible";
-        document.querySelector(".displayTotal").style.visibility = "hidden";
-        document.querySelector(".budgetAmount" ).value = "none";
-    });
 });
+editBudget.addEventListener('click', function() {
+    budgetAmount.style.visibility = "visible";
+    editBudget.style.visibility = "hidden";
+    submitBudget.style.visibility = "visible";
+    displayTotal.style.visibility = "hidden";
+    document.querySelector(".budgetAmount").value = "none";
+});
+
 document.getElementById("purchase").addEventListener('click',function(){
   let expenses = document.getElementById("expenses").value;
   let purchaseAmount = document.getElementById("purchaseAmount").value;

@@ -10,17 +10,16 @@
 </head>
 <body>
     <div class = "top">
-       <h1>Budget Buddy</h1>
-        <a href ="http://127.0.0.1:5501/file.html" class = "logOut">Log Out</a>
+       <h1 class = "title">Budget Buddy</h1>
+       <a href ="http://127.0.0.1:5501/file.html" class = "logOut">Log Out</a>
     </div>
     <div class = "inputContainer">
         <div class ="budget">
             <p id = "weeklyLabel">Weekly Budget Amount</p>
             <p class = "displayTotal"> </p> 
             <input class ="budgetAmount" type = "number" placeholder = "Enter Budget Amount">
-            <button class = "submitBudget">Submit</button><br>
-            <button class = "editBudget">Edit</button>
-            
+            <button class= "submitBudget">Submit</button><br>
+            <button class= "editBudget">Edit</button> 
         </div>
         <div class = "purchased"> 
             <label for="expenses" class = "purchasedTitle">Purchased Items </label><br>
@@ -36,9 +35,10 @@
         </div>
     </div> 
         <div class = "balance">
-            <p id = "spendLabel">Available to spend </p>
-            <p id = ></p>
+            <p class= "spend" id = "spendLabel">Available to spend </p>
+            <p class= "spend" id = "spendAmount"></p>
         </div>
+        <div class = "bottomHalf">
         <div id="totals">
             <h2>Totals</h2>
             <p id="entertainment">Entertainment: </p>
@@ -52,6 +52,7 @@
             <div class= "item-container" id= item3></div>
             <div class= "item-container" id= item4></div>
         </span></p>
+        </div>
     <script src = "script.js"></script>
 </body>
 </html>
