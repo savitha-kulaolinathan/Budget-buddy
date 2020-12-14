@@ -14,7 +14,9 @@ document.querySelector('.submitBudget').addEventListener('click', function(){
     let display = document.querySelector('.displayTotal');
     display.innerHTML =`$ ${inputValue}`;
      availableAmt.style.color ="yellow" 
+     availableAmt.style.fontSize ="30px";
      updateBalance.style.color = "yellow"
+     updateBalance.style.fontSize="30px";
     updateBalance.innerHTML =` ${inputValue }`
 
 
@@ -60,7 +62,7 @@ document.getElementById("purchase").addEventListener('click',function(){
      } 
      else{
       availableAmt.style.color ="red" 
-      availableAmt.style.fontSize= "30px";
+      availableAmt.style.fontSize= "40px";
       updateBalance.style.color ="red" 
       updateBalance.style.fontSize = "30px";
       updateBalance.textContent = "Insufficient Balance";

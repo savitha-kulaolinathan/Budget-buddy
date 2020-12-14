@@ -1,10 +1,13 @@
-/* 
+*{
+    margin: 0;
+    padding: 0;
+}
 
 .top{
     display: flex;
     justify-content: space-between;
 }
-p{
+p, label {
     font-size: 25px;
     margin:100px,20px,20px,20px;
 }
@@ -21,21 +24,45 @@ h1{
     margin: 0px;
     font-family: 'Courgette', cursive;
     text-shadow:-1px 1px 0 white;
+ }
+ 
+.container-area {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
+.inputContainer{
+    display: flexbox;
+     flex-direction: column;
+    text-align: center;  
+} 
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.purchased {
+    display: flex;
+    flex-direction: column;
+ 
+}
+.spentItem {
+    display: inline;
+}
+ 
 select{
     margin-bottom: 20px;
 }
 .displayTotal{
     margin:0px;
     font-size: 40px;   
-}
-.inputContainer{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+ }
+
 #weeklyLabel{
-     margin-top:80px; 
+     margin-top:40px; 
     font-family: 'Epilogue', sans-serif;
     font-size: 25px;
 }
@@ -43,8 +70,13 @@ select{
     margin-bottom: 10px;
     
 }
+.budget {
+    display:flex;
+    flex-direction: column;
+    
+}
 .purchasedTitle,#spendLabel{
-    /* font-family: 'Epilogue', sans-serif; 
+      /* font-family: 'Epilogue', sans-serif;   */
     font-size: 25px;
     text-align: center;
     margin:15px;
@@ -52,9 +84,7 @@ select{
     
     
 }
-#s {
-    color:yellow;
-}
+
 html{
     background-image: linear-gradient(green,rgb(255, 255, 255));
     height:200%;
@@ -67,7 +97,7 @@ html{
     
     background-color: white;
     border-radius: 7px;
-    /* padding:5px; 
+     padding:5px; 
     outline: none;
 }
 .listLabel{
@@ -80,37 +110,63 @@ button {
     padding:  5px 20px;
   
 }
-
-.purchased {
-    display: flex;
-    flex-direction: column;
-    
-    justify-content: center;
-    align-items: center;
+.balance {
+    display: block;
 }
- 
+
 .itemsprop {
      padding:5px;
  }
- .spentItem {
-     display: flex;
- }
- .budget {
-     display:flex-inline;
- }
+  
+.updateValue {
+    display :flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h4 {
+    padding:  0 15px; 
+    border-bottom: 2px solid rgb(10, 8, 8);
+
+}
+.s {
+    margin:10px;
+    border:2px solid rgb(29, 29, 22);
+    height:40vh;
+    text-align: center;
+}
+
+#totals {
+    margin:10px;
+    border:2px solid rgb(27, 19, 19);
+    height:40vh;
+    text-align: center;
+   
+} .label {
+    font-family: 'Epilogue', sans-serif; 
+    font-size: 25px;
+    text-align: center;
+    margin:15px;
+    padding:10px;
+
+}
+
+
 @media only screen and (min-width: 768px) {
     html{
         background-image: linear-gradient(green,rgb(255, 255, 255));
         height:200%;
-    }
+    } 
     .budget {
-        display: flexbox;
+        display: flex;
         
     }
-    
+     
 .inputContainer{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    display:inline-flex;
+     justify-content: space-around; 
+    align-items: center;
+   
+    
 }
-}  */
+} 
