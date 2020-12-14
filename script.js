@@ -49,10 +49,10 @@ document.getElementById("purchase").addEventListener("click", function() {
       } else if (expenses === "Bills") {
         billsTotal = billsTotal + parseFloat(purchaseAmount);
         bills.innerHTML="Bills: $" + billsTotal;
-        item3.append(`$${purchaseAmount} ${comment}, `);
+        item4.append(`$${purchaseAmount} ${comment}, `);
       } else if (expenses === "Clothing") {
         clothingTotal = clothingTotal + parseFloat(purchaseAmount);
         clothing.innerHTML="Clothing: $" + clothingTotal;
-        item4.append(`$${purchaseAmount} ${comment}, `);
+        item3.append(`$${purchaseAmount} ${comment}, `);
       }
 })
