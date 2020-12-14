@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div><a href = "http://127.0.0.1:5501/Budget-buddy/filelogin.html" class = "logOut2">Log Out</a></div>
     <div class = "top">
        <h1 class = "title">Budget Buddy</h1>
-       <a href ="http://127.0.0.1:5501/file.html" class = "logOut">Log Out</a>
+       <a href = "http://127.0.0.1:5501/Budget-buddy/filelogin.html" class = "logOut">Log Out</a>
     </div>
     <div class = "inputContainer">
         <div class ="budget">
@@ -30,8 +31,9 @@
                 <option  class= "category">Clothing</option>
                 <option  class= "category">Bills</option>
             </select><br>
+            <input type = "text" id = "comment" placeholder="Comment"></br>
             <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount"><br>
-            <button class = "purchase" id="purchase">Add Items</button> <br>
+            <button class = "purchase" id="purchase">Add Items</button></br>
         </div>
     </div> 
         <div class = "balance">
@@ -40,18 +42,15 @@
         </div>
         <div class = "bottomHalf">
         <div id="totals">
-            <h2>Totals</h2>
             <p id="entertainment">Entertainment: </p>
-            <p id="food">Food: </p>
-            <p id="clothing">Clothing: </p>
-            <p id="bills">Bills: </p>
-        </div>
-        <p class = "listLabel">List of Items purchased: <span id ="listOfItems">
             <div class= "item-container" id= item1></div>
+            <p id="food">Food: </p>
             <div class= "item-container" id= item2></div>
+            <p id="clothing">Clothing: </p>
             <div class= "item-container" id= item3></div>
+            <p id="bills">Bills: </p>
             <div class= "item-container" id= item4></div>
-        </span></p>
+        </div>
         </div>
     <script src = "script.js"></script>
 </body>

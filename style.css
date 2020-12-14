@@ -16,15 +16,13 @@ p{
     border: 2px solid yellow;
     width:80px;
     text-align: center;
+    margin-top:5px;
 }
 h1{
     margin:0px;
     font-family: 'Courgette', cursive;
     text-shadow:1px 1px 0 white;
     font-size: 50px;
-}
-select{
-    margin: 20px;
 }
 .displayTotal{
     margin:0px;
@@ -40,8 +38,22 @@ select{
     font-family: 'Epilogue', sans-serif;
     font-size: 30px;
 }
-.purchaseAmount{
+#purchaseAmount{
+    margin:0px;
+    width:100px;
+    text-align: center;
+    padding:4px;
     margin-bottom: 10px;
+}
+#comment{
+    visibility: hidden;
+}
+select{
+    width:180px;
+    margin:5px;
+}
+.logOut2{
+    visibility: hidden;
 }
 .purchasedTitle,.spend{
     font-family: 'Epilogue', sans-serif;
@@ -50,16 +62,17 @@ select{
 }
 html{
     background-image: linear-gradient(green,rgb(255, 255, 255));
+    height:100%;
 }
 .purchaseAmount{
     width:80px;
     text-align: center;
     margin:10px;
 }
-.budgetAmount,select,.purchaseAmount{
+.budgetAmount,select,.purchaseAmount,#comment{
     background-color: white;
     border-radius: 5px;
-    padding:8px;
+    padding:6px;
 }
 .submitBudget,.editBudget{
     border-radius: 7px;
@@ -83,9 +96,7 @@ html{
     padding:10px;
     margin: 5px;
 }
-#totals{
-    margin:10px;
-}
+
 @media only screen and (min-width: 768px){
     h1{
         margin:0px;
@@ -94,6 +105,9 @@ html{
         font-size: 100px;
     }
     .logOut{
+        visibility: hidden;
+    }
+    .logOut2{
         height:20px;
         border-color:yellow;
         background-color:green;
@@ -101,8 +115,10 @@ html{
         border-radius: 20px;
         text-decoration: none;
         border: 2px dotted yellow;
-        padding:5px;
+        width:80px;
         text-align: center;
+        padding:5px;
+        visibility: visible;
     }
     .purchase{
         border-radius: 7px;
@@ -119,5 +135,23 @@ html{
     }
     #weeklyLabel{
         margin-top:40px;
+    }
+    .purchasedTitle,#weeklyLabel,#spendLabel{
+        text-shadow:1px 1px 0 rgb(229, 243, 105);
+    }
+    .top{
+        justify-content: center;
+    }
+    #purchaseAmount,#comment{
+        margin:5px;
+        width:100px;
+        text-align: center;
+    }
+    select{
+        width:180px;
+        margin:5px;
+    }
+    #comment{
+        visibility: visible;
     }
 }
