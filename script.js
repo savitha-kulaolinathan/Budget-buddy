@@ -1,25 +1,22 @@
-
-let budgetButton = document.querySelector('.submitBudget');
-let budgetA = document.querySelector(".budgetAmount" );
-let budgetEdit = document.querySelector(".editBudget");
-let expensesAmount= document.querySelector('.purchased')
-
-budgetEdit.style.visibility = "hidden";
-
-budgetButton.addEventListener('click', function(){
-    budgetA.style.visibility = "hidden";
-    budgetEdit.style.visibility = "visible";
-    budgetButton.style.visibility = "hidden";
-    document.querySelector('.displayTotal').style.visibility="visible"
+document.querySelector(".editBudget").style.visibility = "hidden";
+document.querySelector('.submitBudget').addEventListener('click', function(){
+    document.querySelector(".budgetAmount" ).style.visibility = "hidden";
+    document.querySelector(".editBudget").style.visibility = "visible";
+    document.querySelector('.submitBudget').style.visibility = "hidden";
+    document.querySelector('.displayTotal').style.visibility="visible";
     document.querySelector('.displayTotal').style.color = "yellow";
     let inputValue = document.querySelector('.budgetAmount').value;
     let display = document.querySelector('.displayTotal');
     display.innerHTML =`$ ${inputValue}`;
-
+document.querySelector(".editBudget").addEventListener('click', function() {
+        document.querySelector(".budgetAmount" ).style.visibility = "visible";
+        document.querySelector(".editBudget").style.visibility = "hidden";
+        document.querySelector('.submitBudget').style.visibility = "visible";
+        document.querySelector(".displayTotal").style.visibility = "hidden";
+        document.querySelector(".budgetAmount" ).value = "none";
+    });
 });
-
-function expensesAmount(e) {
-  e.preventDefault();
+document.getElementById("purchase").addEventListener('click',function(){
   let expenses = document.getElementById("expenses").value;
   let purchaseAmount = document.getElementById("purchaseAmount").value;
   let listOfItems = document.getElementById("listOfItems");
@@ -36,5 +33,12 @@ function expensesAmount(e) {
   } else if (expenses === "Clothing") {
     item3.append(` Clothing amount: $ ${purchaseAmount}`);
   }
-}
+});
 
+function addBalance() {
+  var budget = parseInt(document.getElemetById("budgetAmt").value);
+  var purchase = parseInt(document.getElemetById("purchaseAmt").value);
+ 
+  var balDue = document.getElementById("balance-amount");
+  balDue.value = budget - purchase;
+}

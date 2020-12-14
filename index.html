@@ -17,34 +17,34 @@
         <div class ="budget">
             <p id = "weeklyLabel">Weekly Budget Amount</p>
             <p class = "displayTotal"> </p> 
-            <input class ="budgetAmount" type = "number" placeholder = "Enter Budget Amount">
+            <input class = "budgetAmount" id = "budgetAmount type = "number" placeholder = "Enter Budget Amount">
             <button class = "submitBudget">Submit</button><br>
-            <button class = "editBudget">Edit</button>            
-        </div>      
-       </div> 
-    <div>
-     <label for="expenses">Purchased Items </label>
+            <button class = "editBudget">Edit</button>
+        </div>
+        <div class = "purchased"> 
+            <label for="expenses" class = "purchasedTitle">Purchased Items </label><br>
             <select id= "expenses">
             <option class= "category">Entertainment</option>
             <option  class= "category">Food</option>
             <option  class= "category">Clothing</option>
             <option  class= "category">Bills</option>
-            
-        </select>
-        <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">
-        <button class = "purchase" id="purchase" onclick="expensesAmount(event)">AddItems</button>
+        </select><br>
+        <input class = "purchaseAmount" id = "purchaseAmount" type = "number" placeholder = "Amount"><br>
+        <button class = "purchase" id="purchase">AddItems</button>
         <h3>List of Items purchased: <span id ="listOfItems">
             <div class= "item-container" id= item1></div>
             <div  class= "item-container" id= item2></div>
             <div class= "item-container" id= item3></div>
             <div class= "item-container" id= item4></div>
         </span></h3>
-    </div>
+        </div>
+    </div> 
         <div class = "balance">
             <p id = "spendLabel">Available to spend </p>
-            <p id = "displayAmount"></p>
+             <span>$ </span><span id = "balance-amount"></span></h4>
         </div>
-    </div>       
-    <script src="./script.js"></script>
+    </div> 
+
+    <script src = "script.js"></script>
 </body>
 </html>

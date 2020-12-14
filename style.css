@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .top{
     display: flex;
     justify-content: space-between;
@@ -13,7 +12,6 @@ p{
     background-color:green;
     color:yellow;
     border-radius: 20px;
-    
 }
 h1{
     margin:0px;
@@ -35,13 +33,14 @@ select{
 #weeklyLabel{
     margin-top:80px;
     font-family: 'Epilogue', sans-serif;
+    font-size: 25px;
 }
 .purchaseAmount{
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
 }
-#purchasedLabel,#spendLabel{
+.purchasedTitle,#spendLabel{
     font-family: 'Epilogue', sans-serif;
-    
+    font-size: 25px;
 }
 html{
     background-image: linear-gradient(green,rgb(255, 255, 255));
@@ -55,21 +54,14 @@ html{
     background-color: white;
     border-radius: 5px;
 }
+.balance {
+  font-size: 1.6rem;
+}
+.budget-icon,
+.expense-icon,
+.balance-icon {
+  font-size: 2.5rem;
+  color: var(--mainBlue);
 
-=======
-.left {
-    display: flex;
-   margin: 15px;
-   padding: 20px;
-   /* justify-content: space-around; */
 
 }
- .enterBudget {
-     margin:10px;
-     padding:10px;
- }
-  .item-container {
-      margin-left:70px;
-      padding: 10px;
-  }
->>>>>>> 8a236d3e6697da42b4f5e0aedcd491e5df23fd12
