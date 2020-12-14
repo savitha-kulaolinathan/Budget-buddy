@@ -3,7 +3,6 @@ let updateBalance= document.getElementById('updateBalance');
 let  availableAmt = document.getElementById('spendLabel');
 
 document.querySelector(".editBudget").style.visibility = "hidden";
-
 document.querySelector('.submitBudget').addEventListener('click', function(){
     document.querySelector(".budgetAmount" ).style.visibility = "hidden";
     document.querySelector(".editBudget").style.visibility = "visible";
@@ -27,7 +26,6 @@ document.querySelector(".editBudget").addEventListener('click', function() {
         document.querySelector(".displayTotal").style.visibility = "hidden";
         document.querySelector(".budgetAmount" ).value = "none";
     });
-
 });
 
 document.getElementById("purchase").addEventListener('click',function(){
@@ -110,6 +108,7 @@ document.getElementById("purchase").addEventListener("click", function() {
 
 
   
+
 
 
 
