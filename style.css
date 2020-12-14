@@ -1,15 +1,116 @@
-.left {
-    display: flex;
-   margin: 15px;
-   padding: 20px;
-   /* justify-content: space-around; */
+/* 
 
+.top{
+    display: flex;
+    justify-content: space-between;
 }
- .enterBudget {
-     margin:10px;
-     padding:10px;
+p{
+    font-size: 25px;
+    margin:100px,20px,20px,20px;
+}
+.logOut{
+    height:25px;
+    border-color:yellow;
+    background-color:green;
+    color:yellow;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+h1{
+    margin: 0px;
+    font-family: 'Courgette', cursive;
+    text-shadow:-1px 1px 0 white;
+}
+select{
+    margin-bottom: 20px;
+}
+.displayTotal{
+    margin:0px;
+    font-size: 40px;   
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#weeklyLabel{
+     margin-top:80px; 
+    font-family: 'Epilogue', sans-serif;
+    font-size: 25px;
+}
+.purchaseAmount{
+    margin-bottom: 10px;
+    
+}
+.purchasedTitle,#spendLabel{
+    /* font-family: 'Epilogue', sans-serif; 
+    font-size: 25px;
+    text-align: center;
+    margin:15px;
+    padding:10px;
+    
+    
+}
+#s {
+    color:yellow;
+}
+html{
+    background-image: linear-gradient(green,rgb(255, 255, 255));
+    height:200%;
+}
+.purchaseAmount{
+    width:80px;
+    text-align: center;
+}
+.budgetAmount,select,.purchaseAmount,button{
+    
+    background-color: white;
+    border-radius: 7px;
+    /* padding:5px; 
+    outline: none;
+}
+.listLabel{
+    font-size: 20px;
+    margin:8px;
+}
+button {
+    
+    margin: 0 10px;
+    padding:  5px 20px;
+  
+}
+
+.purchased {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+}
+ 
+.itemsprop {
+     padding:5px;
  }
-  .item-container {
-      margin-left:70px;
-      padding: 10px;
-  }
+ .spentItem {
+     display: flex;
+ }
+ .budget {
+     display:flex-inline;
+ }
+@media only screen and (min-width: 768px) {
+    html{
+        background-image: linear-gradient(green,rgb(255, 255, 255));
+        height:200%;
+    }
+    .budget {
+        display: flexbox;
+        
+    }
+    
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+}  */

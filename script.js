@@ -1,39 +1,113 @@
-document.getElementById("enterBudget").addEventListener("click", (e) => {
-  e.preventDefault();
-  let budgetAmount = document.getElementById("budgetAmount").value;
-  let amountOfBudget = document.getElementById("amountOfBudget");
-  amountOfBudget.innerText = `$ ${budgetAmount}`;
+
+let updateBalance= document.getElementById('updateBalance');
+let  availableAmt = document.getElementById('spendLabel');
+
+document.querySelector(".editBudget").style.visibility = "hidden";
+
+document.querySelector('.submitBudget').addEventListener('click', function(){
+    document.querySelector(".budgetAmount" ).style.visibility = "hidden";
+    document.querySelector(".editBudget").style.visibility = "visible";
+    document.querySelector('.submitBudget').style.visibility = "hidden";
+    document.querySelector('.displayTotal').style.visibility="visible";
+    document.querySelector('.displayTotal').style.color = "yellow";
+    let inputValue = document.querySelector('.budgetAmount').value;
+    let display = document.querySelector('.displayTotal');
+    display.innerHTML =`$ ${inputValue}`;
+     availableAmt.style.color ="yellow" 
+     updateBalance.style.color = "yellow"
+    updateBalance.innerHTML =` ${inputValue }`
+
+
+document.querySelector(".editBudget").addEventListener('click', function() {
+        document.querySelector(".budgetAmount" ).style.visibility = "visible";
+        document.querySelector(".editBudget").style.visibility = "hidden";
+        document.querySelector('.submitBudget').style.visibility = "visible";
+        document.querySelector(".displayTotal").style.visibility = "hidden";
+        document.querySelector(".budgetAmount" ).value = "none";
+    });
+
 });
 
-function expensesAmount(e) {
-  e.preventDefault();
+document.getElementById("purchase").addEventListener('click',function(){
+ 
   let expenses = document.getElementById("expenses").value;
   let purchaseAmount = document.getElementById("purchaseAmount").value;
-  let listOfItems = document.getElementById("listOfItems");
-  
-  
+  let listOfItems = document.getElementById("listOfItems"); 
+  let balanceCheck= 0;
+   balanceCheck = parseFloat(updateBalance.innerHTML)-parseFloat(purchaseAmount);
 
-  if (expenses === "Entertainment") {
+  if (expenses === "Entertainment" && balanceCheck >= 0) {
     let item1 = document.createElement("div");
-    item1.innerText = `Entertainment amount: $ ${purchaseAmount}`;
-    listOfItems.append(item1);
-    let amountOfBudget = document.getElementById("amountOfBudget");
-  
-    let balance = document.getElementById('balance');   
-    let total = parseInt(amountOfBudget) - parseInt(purchaseAmount);
-    balance.innerText = total;
-    
-  } else if (expenses === "Food") {
+    item1.innerText = `Entertainment: $ ${purchaseAmount}`;
+    listOfItems.append(item1);   
+  } else if (expenses === "Food" && balanceCheck >= 0) {
     let item2 = document.createElement("div");
-    item2.innerText = `Food amount: $ ${purchaseAmount}`;
+    item2.innerText = `Food: $ ${purchaseAmount}`;
     listOfItems.append(item2);
-  } else if (expenses === "Bills") {
+  } else if (expenses === "Bills" && balanceCheck >= 0) {
     let item4 = document.createElement("div");
-    item4.innerText = ` Billing amount: $ ${purchaseAmount}`;
+    item4.innerText = ` Billing: $ ${purchaseAmount}`;
     listOfItems.append(item4);
-  } else if (expenses === "Clothing") {
+  } else if (expenses === "Clothing" && balanceCheck >= 0) {
     let item3 = document.createElement("div");
-    item3.innerText = ` Clothing amount: $ ${purchaseAmount}`;
+    item3.innerText = ` Clothing: $ ${purchaseAmount}`;
     listOfItems.append(item3);
   }
-}
+    if (purchaseAmount != 0) {
+      if (balanceCheck >= 0 ) {
+      updateBalance.innerHTML -= ` ${purchaseAmount}`;
+      
+     } 
+     else{
+      availableAmt.style.color ="red" 
+      availableAmt.style.fontSize= "30px";
+      updateBalance.style.color ="red" 
+      updateBalance.style.fontSize = "30px";
+      updateBalance.textContent = "Insufficient Balance";
+       alert ("Do not have sufficient money!")
+     }       
+
+     }
+  
+});
+let entertainmentTotal = 0.00;
+let clothingTotal = 0.00;
+let foodTotal = 0.00;
+let billsTotal = 0.00;
+document.getElementById("purchase").addEventListener("click", function() {
+    let expenses = document.getElementById("expenses").value;
+    let purchaseAmount = document.getElementById("purchaseAmount").value;
+    let entertainment = document.getElementById("entertainment")
+    let food = document.getElementById("food")
+    let clothing = document.getElementById("clothing")
+    let bills = document.getElementById("bills")
+    
+    balanceCheck = parseFloat(updateBalance.innerHTML)-parseFloat(purchaseAmount);
+ 
+   
+    if (expenses === "Entertainment" &&  balanceCheck >= 0) {
+        entertainmentTotal = entertainmentTotal + parseFloat(purchaseAmount);
+        entertainment.innerHTML="Entertainment: $" + entertainmentTotal;
+      } else if (expenses === "Food" &&  balanceCheck >= 0) {
+        foodTotal = foodTotal + parseFloat(purchaseAmount);
+        food.innerHTML="Food: $" + foodTotal;
+      } else if (expenses === "Bills" && balanceCheck >= 0) {
+        billsTotal = billsTotal + parseFloat(purchaseAmount);
+        bills.innerHTML="Bills: $" + billsTotal;
+      } else if (expenses === "Clothing" && balanceCheck >= 0) {
+        clothingTotal = clothingTotal + parseFloat(purchaseAmount);
+       clothing.innerHTML="Clothing: $" + clothingTotal;
+      }
+});
+
+
+
+
+
+
+
+
+  
+
+
+
