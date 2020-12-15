@@ -3,48 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Budget Buddy</title>
     <link rel = "stylesheet" href = "style.css"></link>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body>
     <div class = "top">
-        <h1>Budget Buddy</h1>
-        <button class ="logOut" type = "text">Log Out</button>
+       <h1>Budget Buddy</h1>
+        <a href ="http://127.0.0.1:5501/file.html" class = "logOut">Log Out</a>
     </div>
+<div class="container-area">
     <div class = "inputContainer">
         <div class ="budget">
-            <p id = "weeklyLabel">Weekly Budget Amount</p>
+            <p id = "weeklyLabel">Weekly Budget Amount</p>            
             <p class = "displayTotal"> </p> 
-            <input class = "budgetAmount" id = "budgetAmount type = "number" placeholder = "Enter Budget Amount">
-            <button class = "submitBudget">Submit</button><br>
-            <button class = "editBudget">Edit</button>
+            <div class ="input"> 
+                <input class ="budgetAmount" type = "number" placeholder = "Enter Budget Amount"><br>        
+                <button class = "submitBudget">Submit</button>
+                <button class = "editBudget">Edit</button>
+            </div>
+           
         </div>
         <div class = "purchased"> 
-            <label for="expenses" class = "purchasedTitle">Purchased Items </label><br>
+            
+            <label for="expenses" class = "purchasedTitle">Category to Spend </label>            
             <select id= "expenses">
+            <!-- <option class ="category" selected>Available Categories</option> -->
             <option class= "category">Entertainment</option>
             <option  class= "category">Food</option>
             <option  class= "category">Clothing</option>
-            <option  class= "category">Bills</option>
-        </select><br>
-        <input class = "purchaseAmount" id = "purchaseAmount" type = "number" placeholder = "Amount"><br>
-        <button class = "purchase" id="purchase">AddItems</button>
-        <h3>List of Items purchased: <span id ="listOfItems">
-            <div class= "item-container" id= item1></div>
-            <div  class= "item-container" id= item2></div>
-            <div class= "item-container" id= item3></div>
-            <div class= "item-container" id= item4></div>
-        </span></h3>
-        </div>
-    </div> 
+            <option  class= "category">Bills</option>            
+            </select>
+            <div class= "spentItem">
+            <input type="text" id = "stuff" placeholder="comment">
+            <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">        
+             <button class = "purchase" id="purchase">Add Expenses</button>       
+            </div>
+        </div> 
+    </div>
+    
         <div class = "balance">
-            <p id = "spendLabel">Available to spend </p>
-             <span>$ </span><span id = "balance-amount"></span></h4>
+            <p class= "label">Available to spend
+            <p id = "spendLabel">$ <span id =updateBalance >0.00</span></p></p>
         </div>
-    </div> 
-
+    </div>
+    <div id="totals">
+        <h4>Spending by Category</h4>
+        <canvas id="chart"></canvas>
+        <p id="entertainment"></p>
+        <p id="food"></p>
+        <p id="clothing"></p>
+        <p id="bills"></p>
+    </div>
+        <div class= "updateValue">
+            <div class= "s">
+                <h4 class = "listLabel">Transactions</h4>
+                <span id ="listOfItems"></span>
+            </div>  
+        </div>
     <script src = "script.js"></script>
 </body>
 </html>
+
