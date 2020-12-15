@@ -89,17 +89,25 @@ html{
     background-image: linear-gradient(green,rgb(255, 255, 255));
     /* height:200%; */
 }
+
 .purchaseAmount{
     width:80px;
     text-align: center;
 }
-.budgetAmount,select,.purchaseAmount,button{
+
+#stuff {
+    width:80px;
+    text-align: center;
+
+}
+.budgetAmount,select,.purchaseAmount,button, #stuff {
     
     background-color: white;
     border-radius: 7px;
-     padding:5px; 
+    padding:5px; 
     outline: none;
 }
+
 .listLabel{
     font-size: 20px;
     margin:8px;
