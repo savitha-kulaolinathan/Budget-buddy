@@ -34,10 +34,10 @@ document.getElementById("purchase").addEventListener("click", function() {
     let clothing = document.getElementById("clothing")
     let bills = document.getElementById("bills")
     let comment = document.getElementById('comment').value;
-  let item1= document.getElementById('item1');
-  let item2= document.getElementById('item2');
-  let item3= document.getElementById('item3');
-  let item4= document.getElementById('item4');
+    let item1= document.getElementById('item1');
+    let item2= document.getElementById('item2');
+    let item3= document.getElementById('item3');
+    let item4= document.getElementById('item4');
     if (expenses === "Entertainment") {
         entertainmentTotal = entertainmentTotal + parseFloat(purchaseAmount);
         entertainment.innerHTML="Entertainment: $" + entertainmentTotal;
