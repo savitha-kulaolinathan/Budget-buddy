@@ -12,7 +12,6 @@ p, label {
     margin:100px,20px,20px,20px;
 }
 .logOut{
-<<<<<<< HEAD
     height:25px;
     border-color:yellow;
     background-color:green;
@@ -20,19 +19,6 @@ p, label {
     border-radius: 20px;
     text-align: center;
     
-=======
-    height:20px;
-    width:80px;
-    border-color:yellow;
-    background-color:green;
-    color:yellow;
-    border-radius: 40px; 
-    font-size: 15px;
-    border: 2px solid yellow;
-    justify-content:center;
-    text-align: center;
-    text-decoration: none;
->>>>>>> 96bd7e4be2d971a36dc574b251063dc3dea9eab9
 }
 h1{
     margin: 0px;
@@ -94,17 +80,14 @@ select{
     font-size: 25px;
     text-align: center;
     margin:15px;
-<<<<<<< HEAD
     padding:10px;
     
-    
-=======
->>>>>>> 96bd7e4be2d971a36dc574b251063dc3dea9eab9
+
 }
 
 html{
     background-image: linear-gradient(green,rgb(255, 255, 255));
-    height:200%;
+    /* height:200%; */
 }
 .purchaseAmount{
     width:80px;
@@ -149,17 +132,18 @@ h4 {
 .s {
     margin:10px;
     border:2px solid rgb(29, 29, 22);
-    height:40vh;
+    /* height:40vh; */
     text-align: center;
 }
 
 #totals {
     margin:10px;
     border:2px solid rgb(27, 19, 19);
-    height:40vh;
+    /* height:40vh; */
     text-align: center;
    
-} .label {
+} 
+.label {
     font-family: 'Epilogue', sans-serif; 
     font-size: 25px;
     text-align: center;
@@ -172,7 +156,7 @@ h4 {
 @media only screen and (min-width: 768px) {
     html{
         background-image: linear-gradient(green,rgb(255, 255, 255));
-        height:200%;
+        /* height:200%; */
     } 
     .budget {
         display: flex;
@@ -183,7 +167,13 @@ h4 {
     display:inline-flex;
      justify-content: space-around; 
     align-items: center;
+
    
     
 }
 } 
+
+ #chart {
+     width: 250px;
+     height: 250px;
+ }
