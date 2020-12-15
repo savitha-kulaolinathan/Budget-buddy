@@ -7,6 +7,7 @@
     <link rel = "stylesheet" href = "style.css"></link>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body>
     <div class = "top">
@@ -29,15 +30,16 @@
         
         <div class = "purchased"> 
             
-            <label for="expenses" class = "purchasedTitle">Category to Spend </label>            
+            <label for="expenses" class = "purchasedTitle">Add Transaction </label>            
             <select id= "expenses">
-            <option class ="category" selected>Available Categories</option>
+            
             <option class= "category">Entertainment</option>
             <option  class= "category">Food</option>
             <option  class= "category">Clothing</option>
             <option  class= "category">Bills</option>            
             </select>
             <div class= "spentItem">
+                <input type="text" id = "stuff" placeholder="Discription">
             <input class = "purchaseAmount" id= "purchaseAmount" type = "number" placeholder = "Amount">        
              <button class = "purchase" id="purchase">Add Expenses</button>       
             </div>
@@ -61,7 +63,10 @@
                 <p id="food"></p>
                 <p id="clothing"></p>
                 <p id="bills"></p>
+               
             </div>
+            <div><canvas id="chart"></canvas> </div>
+            
            
         </div>
        
