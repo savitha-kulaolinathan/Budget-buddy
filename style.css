@@ -187,8 +187,5 @@ body {
   h1{
       font-size: 50px;
   }
-  #weeklyLabel,.purchasedTitle,.label,.totalAmt{
-      text-shadow: -1px 1px 0 yellow;
-      font-size:30px;
-  }
+ 
 }
