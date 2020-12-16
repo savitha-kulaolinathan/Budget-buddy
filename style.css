@@ -1,183 +1,184 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.top{
-    display: flex;
-    justify-content: space-between;
+.top {
+  height: 60px;
+  /* background-color: rgb(172, 218, 64); */
+  /* padding: 20px; */
+  display: flex;
+  justify-content: space-between;
 }
-p, label {
-    font-size: 25px;
-    margin:100px,20px,20px,20px;
+p,
+label {
+  font-size: 25px;
+  margin: 100px, 20px, 20px, 20px;
 }
-.logOut{
-    height:25px;
-    border-color:yellow;
-    background-color:green;
-    color:yellow;
-    border-radius: 20px;
-    text-align: center;
-    
-    height:20px;
-    width:80px;
-    border-color:yellow;
-    background-color:green;
-    color:yellow;
-    border-radius: 40px; 
-    font-size: 15px;
-    border: 2px solid yellow;
-    justify-content:center;
-    text-align: center;
-    text-decoration: none;
+.logOut {
+  border-radius: 20px;
+  height: 20px;
+  border-color: yellow;
+  background-color: green;
+  color: yellow;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 2px solid yellow;
+  width: 80px;
+  text-align: center;
+  margin-top: 5px;
 }
-h1{
-    margin: 0px;
-    font-family: 'Courgette', cursive;
-    text-shadow:-1px 1px 0 white;
- }
- 
-.container-area {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-   
+h1 {
+  margin: 0px;
+  font-family: "Courgette", cursive;
+  text-shadow: -1px 1px 0 white;
 }
-.inputContainer{
-    display: flexbox;
-     flex-direction: column;
-    text-align: center;  
-} 
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .input {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
 }
 
 .purchased {
-    display: flex;
-    flex-direction: column;
- 
+  display: flex;
+  flex-direction: column;
 }
 .spentItem {
-    display: inline;
-}
- 
-select{
-    margin-bottom: 20px;
-}
-.displayTotal{
-    margin:0px;
-    font-size: 40px;   
- }
-
-#weeklyLabel{
-     margin-top:40px; 
-    font-family: 'Epilogue', sans-serif;
-    font-size: 25px;
-}
-.purchaseAmount{
-    margin-bottom: 10px;
-    
-}
-.budget {
-    display:flex;
-    flex-direction: column;
-    
-}
-.purchasedTitle,#spendLabel{
-      /* font-family: 'Epilogue', sans-serif;   */
-    font-size: 25px;
-    text-align: center;
-    margin:15px;
-    padding:10px;
-    
-    
+  display: inline-block;
 }
 
-html{
-    background-image: linear-gradient(green,rgb(255, 255, 255));
-    height:200%;
+select {
+  margin-bottom: 20px;
 }
-.purchaseAmount{
-    width:80px;
-    text-align: center;
+.displayTotal {
+  margin: 0px;
+  font-size: 40px;
 }
-.budgetAmount,select,.purchaseAmount,button{
-    
-    background-color: white;
-    border-radius: 7px;
-     padding:5px; 
-    outline: none;
+
+#weeklyLabel {
+  margin: 15px;
+  padding: 10px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 25px;
 }
-.listLabel{
-    font-size: 20px;
-    margin:8px;
+.purchaseAmount {
+  margin-bottom: 10px;
 }
+
+.purchasedTitle,
+.label,
+.totalAmt {
+  font-family: "Epilogue", sans-serif;
+
+  font-size: 25px;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+  font-weight: 548;
+}
+
+html {
+  background-image: linear-gradient(green, rgb(255, 255, 255));
+}
+
+.purchaseAmount, #stuff {
+  width: 80px;
+  text-align: center;
+  
+}
+
+.budgetAmount,
+select,
+.purchaseAmount,
+button,
+#stuff
+ {
+  background-color: white;
+  border-radius: 7px;
+  padding: 6px;
+  outline: none;
+  border: 1px solid rgb(41, 36, 36);
+}
+
 button {
-    
-    margin: 0 10px;
-    padding:  5px 20px;
-  
-}
-.balance {
-    display: block;
+  padding: 5px 20px;
 }
 
-.itemsprop {
-     padding:5px;
- }
-  
 .updateValue {
-    display :flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:10px;
 }
 
 h4 {
-    padding:  0 15px; 
-    border-bottom: 2px solid rgb(10, 8, 8);
-
-}
-.s {
-    margin:10px;
-    border:2px solid rgb(29, 29, 22);
-    height:40vh;
-    text-align: center;
-}
-
-#totals {
-    margin:10px;
-    border:2px solid rgb(27, 19, 19);
-    height:40vh;
-    text-align: center;
    
-} .label {
-    font-family: 'Epilogue', sans-serif; 
-    font-size: 25px;
-    text-align: center;
-    margin:15px;
-    padding:10px;
+  font-size: 20px;
+  border-bottom: 2px solid rgb(10, 8, 8);
+}
+#totals,
+.s {
+  margin: 10px;
+  border: 2px solid rgb(27, 19, 19);
+  text-align: center;
+  width: 400px;
+}
+#spendLabel,
+#indiv {
+  font-size: 40px;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#chart {
+  width: 100px;
+}
+
+.category {
+    width:100%;
+}
+body {
+    margin:5px;
+    padding:5px;
 }
 
 
 @media only screen and (min-width: 768px) {
-    html{
-        background-image: linear-gradient(green,rgb(255, 255, 255));
-        height:200%;
-    } 
-    .budget {
-        display: flex;
-        
-    }
-     
-.inputContainer{
-    display:inline-flex;
-     justify-content: space-around; 
+  html {
+    background-image: linear-gradient(green, rgb(255, 255, 255));
+    height: 120vh;
+  }
+
+  .inputContainer {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .center {
+    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
-   
-    
+  }
+
+  .updateValue {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  #totals,
+  .s {
+    width: 400px;
+    height: 250px;
+  }
 }
-} 
