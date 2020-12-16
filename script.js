@@ -17,13 +17,19 @@ document.querySelector('.submitBudget').addEventListener('click', function(e){
     indiv.style.fontSize ="40";
     display.innerHTML =`$ ${inputValue}`;
       let amt =document.getElementById("amt");
-      amt.innerHTML =parseInt(amt.innerHTML)+parseInt(inputValue);
+     
        amt.style.color ="yellow";
        amt.style.fontSize= "40";
      availableAmt.style.color ="yellow" 
      availableAmt.style.fontSize ="40px";
-    
+     if (inputValue === "") {
+       alert ("Enter the value");
+     } else{
+      amt.innerHTML =parseInt(amt.innerHTML)+parseInt(inputValue);
       updateBalance.innerHTML =  parseInt(updateBalance.innerHTML) + parseInt(inputValue); 
+
+     }
+    
       
    console.log(updateBalance.innerHTML);
      updateBalance.style.color = "yellow"
