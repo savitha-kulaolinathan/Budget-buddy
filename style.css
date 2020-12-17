@@ -2,8 +2,8 @@
   padding: 0;
   margin: 0;
 }
-html{
-  background-image: linear-gradient(green,white);
+html {
+  background-image: linear-gradient(green, white);
 }
 .top {
   height: 60px;
@@ -62,7 +62,7 @@ select {
 .displayTotal {
   margin: 0px;
   font-size: 40px;
-  color:yellow;
+  color: yellow;
 }
 
 #weeklyLabel {
@@ -88,21 +88,20 @@ select {
 }
 
 html {
-  background-image: linear-gradient(green,white);
+  background-image: linear-gradient(green, white);
 }
 
-.purchaseAmount, #stuff {
+.purchaseAmount,
+#stuff {
   width: 80px;
   text-align: center;
-  
 }
 
 .budgetAmount,
 select,
 .purchaseAmount,
 button,
-#stuff
- {
+#stuff {
   background-color: white;
   border-radius: 7px;
   padding: 6px;
@@ -118,11 +117,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:15px;
+  margin: 15px;
 }
 
 h4 {
-   
   font-size: 20px;
   border-bottom: 2px solid rgb(10, 8, 8);
 }
@@ -151,13 +149,12 @@ h4 {
 }
 
 .category {
-    width:100%;
+  width: 100%;
 }
 body {
-    margin:5px;
-    padding:5px;
+  margin: 5px;
+  padding: 5px;
 }
-
 
 @media only screen and (min-width: 768px) {
   html {
@@ -177,15 +174,14 @@ body {
   .updateValue {
     justify-content: space-around;
     flex-direction: row;
-    margin:10px;
+    margin: 10px;
   }
   #totals,
   .s {
     width: 380px;
     height: 250px;
   }
-  h1{
-      font-size: 50px;
+  h1 {
+    font-size: 50px;
   }
- 
 }
