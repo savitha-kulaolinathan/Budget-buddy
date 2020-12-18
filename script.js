@@ -72,7 +72,6 @@ document.getElementById("purchase").addEventListener("click", function (e) {
     let item1 = document.createElement("div");
     item1.innerHTML = `${stuff}: $ ${purchaseAmount}`;
     listOfItems.append(item1);
-    item1.append(itemValue1);
     entertainmentTotal = entertainmentTotal + parseFloat(purchaseAmount);
   } else if (expenses === "Food" && balanceCheck >= 0) {
     let item2 = document.createElement("div");
