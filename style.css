@@ -1,157 +1,197 @@
-.top{
-    display: flex;
-    justify-content: space-between;
+* {
+  padding: 0;
+  margin: 0;
 }
-p{
-    font-size: 25px;
-    margin:100px,20px,20px,20px;
+html {
+  background-image: linear-gradient(green, white);
 }
-.logOut{
-    height:20px;
-    border-color:yellow;
-    background-color:green;
-    color:yellow;
-    border-radius: 20px;
-    text-decoration: none;
-    border: 2px solid yellow;
-    width:80px;
-    text-align: center;
-    margin-top:5px;
+.top {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
 }
-h1{
-    margin:0px;
-    font-family: 'Courgette', cursive;
-    text-shadow:1px 1px 0 white;
-    font-size: 50px;
+p,
+label {
+  font-size: 25px;
+  margin: 100px, 20px, 20px, 20px;
 }
-.displayTotal{
-    margin:0px;
-    font-size: 40px;   
+.logOut {
+  border-radius: 20px;
+  height: 20px;
+  border-color: yellow;
+  background-color: green;
+  color: yellow;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 2px solid yellow;
+  width: 80px;
+  text-align: center;
+  margin-top: 5px;
+  padding: 4px;
 }
-.inputContainer{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-#weeklyLabel{
-    margin-top:80px;
-    font-family: 'Epilogue', sans-serif;
-    font-size: 30px;
-}
-#purchaseAmount{
-    margin:0px;
-    width:100px;
-    text-align: center;
-    padding:4px;
-    margin-bottom: 10px;
-}
-#comment{
-    visibility: hidden;
-}
-select{
-    width:180px;
-    margin:5px;
-}
-.logOut2{
-    visibility: hidden;
-}
-.purchasedTitle,.spend{
-    font-family: 'Epilogue', sans-serif;
-    font-size: 30px;
-    text-align: center;
-}
-html{
-    background-image: linear-gradient(green,rgb(255, 255, 255));
-    height:100%;
-}
-.purchaseAmount{
-    width:80px;
-    text-align: center;
-    margin:10px;
-}
-.budgetAmount,select,.purchaseAmount,#comment{
-    background-color: white;
-    border-radius: 5px;
-    padding:6px;
-}
-.submitBudget,.editBudget{
-    border-radius: 7px;
-    background-color: rgb(245, 245, 135);
-    width:80px;
-    padding: 4px;
-}
-.editBudget{
-    margin-bottom:20px;
-}
-.purchase{
-    border-radius: 7px;
-    background-color: rgb(245, 245, 135);
-    width:80px;
-    padding: 4px;
-}
-.listLabel,.item-container{
-    visibility: hidden;
-}
-.balance{
-    padding:10px;
-    margin: 5px;
+h1 {
+  margin: 0px;
+  font-family: "Courgette", cursive;
+  text-shadow: -1px 1px 0 white;
 }
 
-@media only screen and (min-width: 768px){
-    h1{
-        margin:0px;
-        font-family: 'Courgette', cursive;
-        text-shadow:3px 1px 0 rgb(229, 243, 105);
-        font-size: 100px;
-    }
-    .logOut{
-        visibility: hidden;
-    }
-    .logOut2{
-        height:20px;
-        border-color:yellow;
-        background-color:green;
-        color:yellow;
-        border-radius: 20px;
-        text-decoration: none;
-        border: 2px dotted yellow;
-        width:80px;
-        text-align: center;
-        padding:5px;
-        visibility: visible;
-    }
-    .purchase{
-        border-radius: 7px;
-        background-color: rgb(245, 245, 135);
-        width:80px;
-        padding: 4px;
-    }
-    .listLabel,.item-container{
-        visibility: visible;
-    }
-    .bottomHalf{
-        display:flex;
-        justify-content: space-between;
-    }
-    #weeklyLabel{
-        margin-top:40px;
-    }
-    .purchasedTitle,#weeklyLabel,#spendLabel{
-        text-shadow:1px 1px 0 rgb(229, 243, 105);
-    }
-    .top{
-        justify-content: center;
-    }
-    #purchaseAmount,#comment{
-        margin:5px;
-        width:100px;
-        text-align: center;
-    }
-    select{
-        width:180px;
-        margin:5px;
-    }
-    #comment{
-        visibility: visible;
-    }
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.purchased {
+  display: flex;
+  flex-direction: column;
+}
+.spentItem {
+  display: inline-block;
+}
+
+select {
+  margin-bottom: 20px;
+}
+.displayTotal {
+  margin: 0px;
+  font-size: 40px;
+  color: yellow;
+}
+
+#weeklyLabel {
+  margin: 15px;
+  padding: 10px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 25px;
+}
+.purchaseAmount {
+  margin-bottom: 10px;
+}
+
+.purchasedTitle,
+.label,
+.totalAmt {
+  font-family: "Epilogue", sans-serif;
+
+  font-size: 25px;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+  font-weight: 548;
+}
+
+html {
+  background-image: linear-gradient(green, white);
+}
+
+.purchaseAmount,
+#stuff {
+  width: 80px;
+  text-align: center;
+}
+
+.budgetAmount,
+select,
+.purchaseAmount,
+button,
+#stuff {
+  background-color: white;
+  border-radius: 7px;
+  padding: 6px;
+  outline: none;
+  border: 1px solid rgb(41, 36, 36);
+}
+
+button {
+  padding: 5px 20px;
+}
+
+.updateValue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+h4 {
+  font-size: 20px;
+  border-bottom: 2px solid rgb(10, 8, 8);
+}
+#totals,
+.s {
+  margin: 19px;
+  border: 2px solid rgb(27, 19, 19);
+  text-align: center;
+  width: 380px;
+}
+#spendLabel,
+#indiv {
+  font-size: 40px;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#chart {
+  width: 100px;
+}
+
+.category {
+  width: 100%;
+}
+body {
+  margin: 5px;
+  padding: 5px;
+}
+.design {
+  padding: 10px;
+  display: inline-block;
+}
+.reset {
+  background-color: green;
+  color: yellow;
+  margin: 0 10px;
+  border: 2px solid yellow;
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    height: 120vh;
+  }
+
+  .inputContainer {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .center {
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .updateValue {
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 10px;
+  }
+  #totals,
+  .s {
+    width: 380px;
+    height: 250px;
+  }
+  h1 {
+    font-size: 50px;
+  }
 }

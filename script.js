@@ -1,58 +1,122 @@
-let editBudget = document.querySelector(".editBudget");
-let budgetAmount = document.querySelector(".budgetAmount");
-let submitBudget = document.querySelector('.submitBudget');
-let displayTotal = document.querySelector('.displayTotal');
-let entertainmentTotal = 0.00;
-let clothingTotal = 0.00;
-let foodTotal = 0.00;
-let billsTotal = 0.00;
-editBudget.style.visibility = "hidden";
-
-submitBudget.addEventListener('click', function(){
-    budgetAmount.style.visibility = "hidden";
-    editBudget.style.visibility = "visible";
-    submitBudget.style.visibility = "hidden";
-    displayTotal.style.visibility="visible";
-    displayTotal.style.color = "yellow";
-    let inputValue = document.querySelector('.budgetAmount').value;
-    let display = document.querySelector('.displayTotal');
-    display.innerHTML =`$ ${inputValue}`;
-});
-editBudget.addEventListener('click', function() {
-    budgetAmount.style.visibility = "visible";
-    editBudget.style.visibility = "hidden";
-    submitBudget.style.visibility = "visible";
-    displayTotal.style.visibility = "hidden";
+let updateBalance = document.getElementById("updateBalance");
+let availableAmt = document.getElementById("spendLabel");
+let entertainmentTotal = 0.0;
+let clothingTotal = 0.0;
+let foodTotal = 0.0;
+let billsTotal = 0.0;
+document.querySelector(".editBudget").style.visibility = "hidden";
+document.querySelector(".submitBudget").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(".budgetAmount").style.visibility = "hidden";
+  document.querySelector(".editBudget").style.visibility = "visible";
+  document.querySelector(".submitBudget").style.visibility = "hidden";
+  document.querySelector(".displayTotal").style.visibility = "visible";
+  document.querySelector(".displayTotal").style.color = "yellow";
+  let inputValue = document.querySelector(".budgetAmount").value;
+  let display = document.querySelector(".displayTotal");
+  let indiv = document.getElementById("indiv");
+  let amt = document.getElementById("amt");
+  indiv.style.color = "yellow";
+  indiv.style.fontSize = "40";
+  amt.style.color = "yellow";
+  amt.style.fontSize = "40";
+  availableAmt.style.color = "yellow";
+  availableAmt.style.fontSize = "40px";
+  updateBalance.style.color = "yellow";
+  updateBalance.style.fontSize = "40px";
+  display.innerHTML = `$ ${inputValue}`;
+  if (inputValue === "") {
+    alert("Enter the value");
+  } else {
+    amt.innerHTML = `${parseFloat(amt.innerHTML) + parseFloat(inputValue)}`;
+    updateBalance.innerHTML = `${
+      parseFloat(updateBalance.innerHTML) + parseFloat(inputValue)
+    }`;
+  }
+  document.querySelector(".editBudget").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".budgetAmount").style.visibility = "visible";
+    document.querySelector(".editBudget").style.visibility = "hidden";
+    document.querySelector(".submitBudget").style.visibility = "visible";
+    document.querySelector(".displayTotal").style.visibility = "hidden";
     document.querySelector(".budgetAmount").value = "none";
+  });
 });
 
-document.getElementById("purchase").addEventListener("click", function() {
-    let expenses = document.getElementById("expenses").value;
-    let purchaseAmount = document.getElementById("purchaseAmount").value;
-    let entertainment = document.getElementById("entertainment")
-    let food = document.getElementById("food")
-    let clothing = document.getElementById("clothing")
-    let bills = document.getElementById("bills")
-    let comment = document.getElementById('comment').value;
-    let item1= document.getElementById('item1');
-    let item2= document.getElementById('item2');
-    let item3= document.getElementById('item3');
-    let item4= document.getElementById('item4');
-    if (expenses === "Entertainment") {
-        entertainmentTotal = entertainmentTotal + parseFloat(purchaseAmount);
-        entertainment.innerHTML="Entertainment: $" + entertainmentTotal;
-        item1.append (`$${purchaseAmount} ${comment}, `);
-      } else if (expenses === "Food") {
-        foodTotal = foodTotal + parseFloat(purchaseAmount);
-        food.innerHTML="Food: $" + foodTotal;
-        item2.append(`$${purchaseAmount} ${comment}, `);
-      } else if (expenses === "Bills") {
-        billsTotal = billsTotal + parseFloat(purchaseAmount);
-        bills.innerHTML="Bills: $" + billsTotal;
-        item4.append(`$${purchaseAmount} ${comment}, `);
-      } else if (expenses === "Clothing") {
-        clothingTotal = clothingTotal + parseFloat(purchaseAmount);
-        clothing.innerHTML="Clothing: $" + clothingTotal;
-        item3.append(`$${purchaseAmount} ${comment}, `);
-      }
-})
+document.getElementById("purchase").addEventListener("click", function (e) {
+  e.preventDefault();
+  let stuff = document.getElementById("stuff").value;
+  let expenses = document.getElementById("expenses").value;
+  let purchaseAmount = document.getElementById("purchaseAmount").value;
+  let listOfItems = document.getElementById("listOfItems");
+  let balanceCheck = 0.0;
+  balanceCheck =
+    parseFloat(updateBalance.innerHTML) - parseFloat(purchaseAmount);
+  if (purchaseAmount != 0) {
+    if (balanceCheck >= 0.0) {
+      updateBalance.innerHTML = (
+        parseFloat(updateBalance.innerHTML) - parseFloat(purchaseAmount)
+      ).toFixed(2);
+    } else {
+      alert("Do not have sufficient money!");
+      availableAmt.style.color = "red";
+      availableAmt.style.fontSize = "40px";
+      updateBalance.style.color = "red";
+      updateBalance.style.fontSize = "40px";
+      updateBalance.innerHTML = parseFloat(updateBalance.innerHTML).toFixed(2);
+      console.log(updateBalance.innerHTML);
+    }
+  }
+
+  if (expenses === "Entertainment" && balanceCheck >= 0) {
+    let item1 = document.createElement("div");
+    item1.innerHTML = `${stuff}: $ ${purchaseAmount}`;
+    listOfItems.append(item1);
+    entertainmentTotal = entertainmentTotal + parseFloat(purchaseAmount);
+  } else if (expenses === "Food" && balanceCheck >= 0) {
+    let item2 = document.createElement("div");
+    item2.innerHTML = `${stuff}: $ ${purchaseAmount}`;
+    listOfItems.append(item2);
+    foodTotal = foodTotal + parseFloat(purchaseAmount);
+  } else if (expenses === "Bills" && balanceCheck >= 0) {
+    let item4 = document.createElement("div");
+    item4.innerHTML = `${stuff}: $ ${purchaseAmount}`;
+    billsTotal = billsTotal + parseFloat(purchaseAmount);
+    listOfItems.append(item4);
+  } else if (expenses === "Clothing" && balanceCheck >= 0) {
+    let item3 = document.createElement("div");
+    item3.innerHTML = ` ${stuff}: $ ${purchaseAmount}`;
+    listOfItems.append(item3);
+    clothingTotal = clothingTotal + parseFloat(purchaseAmount);
+  }
+
+  var ctx = document.getElementById("chart").getContext("2d");
+  var chart = new Chart(ctx, {
+    type: "pie",
+    data: {
+      labels: ["Entertainment", "Clothing", "Food", "Bills"],
+      datasets: [
+        {
+          label: "Spending by Category",
+          data: [entertainmentTotal, clothingTotal, foodTotal, billsTotal],
+          backgroundColor: [
+            "rgba(255, 99, 132, 1)",
+            "rgba(255,127,80, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(234, 100, 191, 1)",
+          ],
+          borderColor: [
+            "rgba(255, 99, 132, 1)",
+            "rgba(255,127,80, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(234, 100, 191, 1)",
+          ],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {},
+  });
+});
